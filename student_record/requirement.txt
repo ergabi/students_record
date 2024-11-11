@@ -1,0 +1,6 @@
+HTML5 
+CSS3
+JavaScripts
+Python python 3.12.7
+Django 5.0.9
+SQLite3 3.47.0

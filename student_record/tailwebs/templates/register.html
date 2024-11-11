@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Register</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css\dashboard.css' %}">
+    </head>
+    <body>
+        <header class="header">
+            <div class="left">TAILWEBS</div>
+        </header>
+        <main class="container">
+            <h2>Register</h2>
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Register</button>
+                <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+            </form>
+        </main>
+    </body>
+</html>

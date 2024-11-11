@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ form.instance.pk|yesno:"Edit Record, Add New" }}</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css\dashboard.css' %}">
+    </head>
+    <body>
+        <header class="header">
+            <div class="left">TAILWEBS</div>
+            <div class="right">
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
+        </header>
+        <main class="loglayout">
+            <h1>{{ form.instance.pk|yesno:"Edit Record, Add New" }}</h1>
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a href="{% url 'dashboard' %}" class="btn btn-secondary">Back</a>
+            </form>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css\dashboard.css' %}">
+    </head>
+    <body>
+        <header class="header">
+            <div class="left">TAILWEBS</div>
+            <div class="right">
+                <a href="{% url 'home' %}">Home</a>
+            </div>
+        </header>
+        <main class="loglayout">
+            <h1>Login</h1>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA1VJREFUSEvllk1oVFcUx//nTYwfM+8l7955q+xcuJHEYhMVBL9QGuJGaRdGXClIWinadlEEQdCFC/GjC5UguFFaCoKUUkOU0oJuoilUomJXWbR00Zl7J8ybCcRk7rH3OVNmksnMm0zBhXf33j33/zvn3HPuvYR3NOgdcdEymJkTszMzfcaYAes0Oc6TZHf3FBGVWgmiJXCo1McAvgHQswjyJzN/7qXTP8SFxwaHSl0BcKqRMAOXPSm/igOPBS4otY+BB1aQgacO8+n5ROI3+72qVPrQEF0gIEo9jNnjBsEvzeCxwKFSDwHsBTCVEqKfiF5XCzNzZ0HrSQC9DIx5Ug61DWZmp6B1EcAaEJ1whbheTzTU+jMwXwOQTwnhE5FpBG8acUHrPmZ+ZkUcov1JIe7XEyxqPWSYfyrPbXSlfNkWeDab7SkR/RW1DtHhlBDf1RMsaD3MzN9GDhrTkwyCv9sC28WhUgqAaFS1eaUuEfAlgKwrZdD2HpfB5wGcAVBiooOeED9WC+ez2QNEdBdA4t/CP+tKee5/AfP09JqC570AsL4s+BjAJIhWgbkXwI7y/z9SQvQtrvp6TjQtrsqicpHdsS2zTDRTAIZdKa2DTUdscHR42NZS6lMCPmJgG4gWiHmSHWcs5fujzVqo2puWwE3DaMEgFjifz0vMzW2nRGIrmPvBvLqGQTQHokkulSa4s/NxV1eXbuZDQ3Aul+vuMOYigGO2jZuJlecZzKOvib6WUuaXW7OsWKjUJwBuAEhXLZ4F8AzMNWc1iDoBbAKwrsr2H2Ye8dLpe7GrupjNDhiiiUqUBNwC0dWk7z8nIq4nxMxUzOV6wXySgaOV6B1jtiSDwF4gtbuz+Ef5prGtsQHALBMNekI8ipnmyCzM5XbCGHum2wy8SgmxaXFvL0l1XqnLBHwRtQ9w3JPyZivQim2o9QiY7VZZnSUPhCXgUCm7j2sBjLtSDq4E+h9cqZ8B7LGZc6VMLtvHtm1ofj5bNjjkSvl9O+CC1keY+bbVWHAc3/f9mYpeTcTFTGazcZzoSUPAYErK8XbA1Xc0EfWlhLC1E40acJjJ7ILjvH0vGbPbDYJf2wE30qsBRwfGwsIHUWo6On6vTs1KHGikF/c0Wgm34Zr3D/wGyEBOLtZeCL4AAAAASUVORK5CYII="/>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <a href="{% url 'home' %}">Forget password?</a>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <button  href="{% url 'home' %}" class="btn btn-secondary">Back </button>
+            </form>
+        </main>
+    </body>
+</html>

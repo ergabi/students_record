@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-image: url(../images/wp1888115-classroom-wallpapers.jpg);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(250, 252, 250, 0.92);
+    color: rgb(239, 13, 13);
+    padding: 1em 2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header .left {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .header .right a {
+    color: rgb(243, 9, 9);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 1em;
+  }
+  
+  .header .right a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  h1, h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin: 1em 0;
+  }
+  
+  .container {
+    width: 80%;
+    background: #f9f6f6;
+    padding: 2em;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 1em;
+    border-radius: 8px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  form input[type="text"],
+  form input[type="password"],
+  form input[type="email"],
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  form button {
+    padding: 0.75em 1.5em;
+    color: #fcf9f9;
+    background-color: #67c3f2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #007bff;
+  }
+  
+  form .delete {
+    background-color: #f77067;
+  }
+  
+  form .delete:hover {
+    background-color: #ec1616;
+  }
+  
+  form a {
+    text-decoration: none;
+    color: #4CAF50;
+  }
+  
+  form a:hover {
+    text-decoration: underline;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+  }
+  
+  table, td {
+    border: 0.5px solid #ddddddbb;
+  }
+  
+  th, td {
+    padding: 1em;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #101010;
+    font-weight: bold;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .actions .button {
+    padding: 0.5em 1em;
+    color: white;
+    background-color: #15b8c7;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .actions .button:hover {
+    background-color: #bde3bf;
+  }
+  
+  .actions .delete {
+    background-color: #f44336;
+  }
+  
+  .actions .delete:hover {
+    background-color: #d32f2f;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .header {
+      padding: 1em;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    h1, h2 {
+      font-size: 1.5em;
+    }
+  
+    .container {
+      padding: 1em;
+    }
+  
+    table, th, td {
+      font-size: 0.9em;
+    }
+  }
+  
+ 
+  .loglayout {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    color:white;
+    background-color: rgba(28, 26, 26, 0.527);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .loglayout h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #f3f8f6;
+  }
+  
+  .loglayout form input[type="text"],
+  .loglayout form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #898080;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .loglayout form button[type="submit"],
+  .loglayout form button[type="button"] {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .loglayout form button[type="submit"]:hover,
+  .loglayout form button[type="button"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .loglayout form a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .loglayout form a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  #formModal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 35%;
+    border-radius: 8px;
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-button:hover, .close-button:focus {
+    color: black;
+    cursor: pointer;
+  }
+  
+ 
+  .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  

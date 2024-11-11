@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        {% load static %}
+            <link rel="stylesheet" href="{% static 'css\dashboard.css' %}">
+    </head>
+    <body>
+        <header class="header">
+            <div class="left">TAILWEBS</div>
+            <div class="right">
+                <a href="{% url 'login' %}">Login</a>
+            </div>
+        </header>
+        <main>
+            <h1>Welcome</h1>
+        </main>
+    </body>
+</html>
